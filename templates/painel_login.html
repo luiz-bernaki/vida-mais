@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso ao Painel Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="visor">
+    <div class="cabecalho">
+      <div class="logo">
+        <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da Clínica Vida Mais">
+      </div>
+      <h1 id="titulo">Acesso ao Painel de Monitoramento</h1>
+    </div>
+    <div class="login">
+      <div id="login">
+        <form method="POST">
+          <div class="informacoes">
+            <div class="input">
+              <input id="input" name="admin" placeholder="Usuário Admin" required>
+            </div>
+            <div class="input">
+              <input id="input" type="password" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="button">
+              <button id="button" type="submit">Entrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

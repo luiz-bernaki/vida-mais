@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Monitoramento</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='painel.css') }}">
+</head>
+<body>
+  <h1>Painel de Monitoramento</h1>
+
+  <h2>Total de Usuários Cadastrados: {{ total_usuarios }}</h2>
+  <h2>Total de Alertas Enviados: {{ alertas }}</h2>
+
+  <h2>Usuários Logados</h2>
+  <ul>
+    {% for u in usuarios %}
+      <li>{{ u }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Todos os Usuários</h2>
+  <ul>
+    {% for u in todos_usuarios %}
+      <li>
+        {{ u }}
+        <form action="/remover_usuario" method="POST" style="display:inline;">
+          <input type="hidden" name="nome" value="{{ u }}">
+          <button type="submit">Remover</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Tentativas de Login</h2>
+  <ul>
+    {% for t in tentativas %}
+      <li>{{ t[0] }} - {{ t[1] }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Alertas Detalhados</h2>
+  <ul>
+    {% for alerta in alertas_detalhados %}
+      <li>{{ alerta }}</li>
+    {% endfor %}
+  </ul>
+
+  <form action="/gerar_planilha" method="POST">
+    <button id="button" type="submit">Baixar Relatório CSV</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Vida Mais</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="visor">
+    <div class="cabecalho">
+      <div class="logo">
+        <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da Clínica Vida Mais">
+      </div>
+      <h1 id="titulo">Bem-vindo à Central de Monitoramento</h1>
+    </div>
+    <div class="login">
+      <div id="login">
+        <form action="/login" method="POST">
+          <div class="informacoes">
+            <div class="input">
+              <input id="input" name="usuario" placeholder="Usuário" required>
+            </div>
+            <div class="input">
+              <input id="input" type="password" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="button">
+              <button id="button" type="submit">Login</button>
+            </div>
+          </div>
+        </form>
+        <p>Não tem conta? <a href="/cadastro">Cadastre-se</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

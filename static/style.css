@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 150px;  /* Ajuste conforme o tamanho da sua imagem */
+    height: auto;
+    margin: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titulo {
+    text-align: center;
+    color: #0b76c2;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.cabecalho {
+    width: 100vw;
+    height: 40vh;
+}
+
+#input {
+    width: 100%;
+    max-width: 350px;
+    height: 45px;
+    border-radius: 35px;
+    background-color: #f0f8ff;
+    border: solid 1px black;
+    padding: 5px;
+    font-size: large;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#button {
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    border-radius: 35px;
+    background-color: #0fc80f;
+    border: none;
+    padding: 5px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Muda aqui para não comprimir o card */
+    align-items: center;
+
+    width: 90%;
+    max-width: 400px;
+
+    padding: 40px 20px; /* Aumenta o espaço interno */
+
+    background-color: #0b76c2;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    margin: 20px auto;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.informacoes{
+   display: flex;
+    flex-direction: column;
+    gap: 25px; /* Mantém espaçamento entre inputs e botão */
+    width: 100%;
+    align-items: center;
+}
+
+.visor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #f0f8ff 0%, #0077CC 135%);
+}
+/*Resposividade (tablet)*/
+@media screen and (max-width: 1024px) {
+ .cabecalho{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #logo{
+    width: 400px;
+    height: auto;
+ }
+ #titulo{
+    font-size: xx-large;
+ }
+ .login{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #login{
+    width: 45%;
+    height: 50%;
+ }
+ #input{
+    width: 400px;
+    height: 50px;
+ }
+ #button{
+    width: 180px;
+    height: 35px;
+ }
+ .informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+ .visor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+}
+/*Resposividade (celular)*/
+@media screen and (max-width: 768px) {
+    .cabecalho{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #logo{
+    width: 300px;
+    height: auto;
+ }
+ #titulo{
+    font-size: x-large;
+ }
+ .login{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #login{
+    width: 75%;
+    height: 55%;
+ }
+ #input{
+    width: 250px;
+    height: 35px;
+ }
+ #button{
+    width: 115px;
+    height: 30px;
+ }
+ .informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+ }
+ .visor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+}
