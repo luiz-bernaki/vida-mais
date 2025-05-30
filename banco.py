@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sqlite3
 
 def criar_banco():
@@ -50,3 +51,34 @@ def remover_usuario(nome):
     cursor.execute('DELETE FROM usuarios WHERE nome = ?', (nome,))
     conn.commit()
     conn.close()
+=======
+import sqlite3
+
+def criar_banco():
+    conn = sqlite3.connect('usuarios.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS usuarios (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT NOT NULL,
+            senha TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+def adicionar_usuario(nome, senha):
+    conn = sqlite3.connect('usuarios.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO usuarios (nome, senha) VALUES (?, ?)', (nome, senha))
+    conn.commit()
+    conn.close()
+
+def buscar_usuario(nome):
+    conn = sqlite3.connect('usuarios.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM usuarios WHERE nome = ?', (nome,))
+    usuario = cursor.fetchone()
+    conn.close()
+    return usuario
+>>>>>>> 6e665a87b702563a9747773e5538a73d587e0d2c

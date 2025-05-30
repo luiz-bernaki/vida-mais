@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,3 +35,42 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Vida Mais</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="visor">
+    <div class="cabecalho">
+      <div class="logo">
+        <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da clínica Vida Mais.">
+      </div>
+      <h1 id="titulo">Cadastro de Novo Usuário</h1>
+    </div>
+
+    <div class="login">
+      <div id="login">
+        <form action="/cadastro" method="POST">
+          <div class="informacoes">
+            <div class="input">
+              <input id="input" name="usuario" placeholder="Usuário" required>
+            </div>
+            <div class="input">
+              <input id="input" type="password" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="button">
+              <button id="button" type="submit">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+        <p>Já tem conta? <a href="/">Fazer Login</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> 6e665a87b702563a9747773e5538a73d587e0d2c
